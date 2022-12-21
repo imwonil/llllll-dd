@@ -10,9 +10,12 @@ const output ={
         res.render("home/login");
 
     },
+    register: (req, res) => {
+        res.render("home/register");
+    },
 };  
 
-const process = {
+const process = { 
 login: (req, res) => {
   const user = new User(req.body);
   const response = user.login();
