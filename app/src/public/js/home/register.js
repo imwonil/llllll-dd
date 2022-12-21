@@ -11,11 +11,16 @@ const registerBtn = document.querySelector("#button");
 registerBtn.addEventListener("click", register );
 
 function register () {
-const req = {
+ if(!id.value) return alert("아이디를 입력하세요");
+    if (psword.value !== confirmPsword.value) {
+    return alert("비밀번호가 일치하지 않습니다."); 
+}
+ const req = {
 id: id.value,
 name: name.value,
 psword: psword.value,
-confirmPsword: confirmPsword.value,
+
+
 
 };
  
@@ -34,9 +39,9 @@ location.href = "/login";
 } else {
 alert(res.msg);
 }
-})
-.catch((err) => { 
-console.error("회원가입 중 에러 발생");
 });
+// .catch((err) => { 
+// console.error("회원가입 중 에러 발생");
+// });
 
-}   
+}     
