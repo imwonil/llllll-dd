@@ -14,7 +14,7 @@ id: id.value,
 psword: psword.value,
 };
 
-fetch("/login",{
+fetch("/login", {
   method: "POST",
   headers: {
     "Content-Type" : "application/json"
@@ -24,12 +24,12 @@ fetch("/login",{
 .then((res) => res.json())
 .then((res) => {          
 if(res.success){
-location.href ="/"; 
+location.href = "/"; //https://www.youtube.com/watch?v=EBhtT9TGtqY
+                     //지정한 경로로 이동한다.
 } else {
 alert(res.msg);
 
 }
-
 
 });
 
