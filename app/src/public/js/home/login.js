@@ -2,7 +2,7 @@
    
 const id = document.querySelector("#id");
 const psword = document.querySelector("#psword");
-const loginBtn = document.querySelector("button");
+const loginBtn = document.querySelector("#button");
 
 
 
@@ -30,7 +30,7 @@ location.href = "/"; //https://www.youtube.com/watch?v=EBhtT9TGtqY
 alert(res.msg);
 
 }
-
+ 
 });
 
 }  

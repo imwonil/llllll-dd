@@ -24,7 +24,7 @@ psword: psword.value,
 
 };
  
-
+ 
 fetch("/register", {
   method: "POST",
   headers: {
@@ -34,8 +34,8 @@ fetch("/register", {
 })
 .then((res) => res.json())
 .then((res) => {          
-if(res.success){
-location.href = "/login"; 
+if  (res.success){
+location.href ="/login"; 
 } else {
 alert(res.msg);
 }
