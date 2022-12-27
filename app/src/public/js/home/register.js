@@ -18,7 +18,8 @@ function register () {
 id: id.value,
 name: name.value,
 psword: psword.value,
-confirmPsword: confirmPsword.value,
+
+
   
 
 

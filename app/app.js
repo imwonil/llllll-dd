@@ -2,8 +2,9 @@
 //모듈
 const express = require("express");
 const bodyParser = require("body-parser");
+const dotenv = require("dotenv");
+dotenv.config();
 const app =express();
-
 
 //
 const home =require("./src/routes/home");
@@ -17,4 +18,4 @@ app.use(bodyParser.json());
 //포함될 경우제대로 인식되지 앟는 문제 해결
 app.use(bodyParser.urlencoded({extended: true}));
 app.use("/", home); 
-module.exports = app;  
+module.exports = app;   
