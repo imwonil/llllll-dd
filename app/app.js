@@ -13,8 +13,8 @@ dotenv.config();
 //
 const home =require("./src/routes/home");
 
-const logger =require("./src/config/logger");
-logger.error("wonil");
+//const logger =require("./src/config/logger");  파일 이동 wwww.js 로
+//logger.error("wonil");
   
 
 //앱 셋팅
