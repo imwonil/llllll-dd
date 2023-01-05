@@ -8,24 +8,24 @@ class UserStorage{
 static getUserInfo(id){
 
    return new Promise((resolve, reject) => {
-      const quary ="SELECT * FROM users WHERE id = ?" ;
+      const quary ="SELECT * FROM  users WHERE id = ?" ;
     db.query(quary, [id], (err, data ) => {
   if (err) reject(`${err}`);
-       resolve(data[0]);
+      else resolve(data[0]);
    });
 });
-}
+} 
  
  
 static async save(userInfo) {
     return new Promise((resolve, reject) => {
-   const quary = " INSERT INTO users( id, name, psword, tell) VALUES(?, ?, ?, ?) ;" ;
+   const quary = " INSERT INTO  users( id, name, psword, tell) VALUES(?, ?, ?, ?) ;" ;
  db.query(
    quary, 
    [userInfo.id, userInfo.name, userInfo.psword, userInfo.tell],
     (err) => {
 if (err) reject(`${err}`);
-    resolve({ success: true });
+   else resolve({ success: true });
     
 });
 }); 
