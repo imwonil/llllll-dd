@@ -19,15 +19,17 @@ static getUserInfo(id){
  
 static async save(userInfo) {
     return new Promise((resolve, reject) => {
-   const quary = " INSERT INTO users( id, name, psword) VALUES(?, ?, ?) ;" ;
+   const quary = " INSERT INTO users( id, name, psword, tell) VALUES(?, ?, ?, ?) ;" ;
  db.query(
    quary, 
-   [userInfo.id, userInfo.name, userInfo.psword],
+   [userInfo.id, userInfo.name, userInfo.psword, userInfo.tell],
     (err) => {
 if (err) reject(`${err}`);
     resolve({ success: true });
+    
 });
 }); 
+
 }
    
 }
