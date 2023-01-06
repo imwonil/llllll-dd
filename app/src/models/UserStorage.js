@@ -24,7 +24,7 @@ static async save(userInfo) {
    quary, 
    [userInfo.id, userInfo.name, userInfo.psword, userInfo.tell],
     (err) => {
-if (err) reject(`${err}`);
+if (err) reject(`${"이미 존재한 아이디 입니다."}`);
    else resolve({ success: true });
     
 });
@@ -36,3 +36,4 @@ if (err) reject(`${err}`);
  
 module.exports = UserStorage;
 
+ 
